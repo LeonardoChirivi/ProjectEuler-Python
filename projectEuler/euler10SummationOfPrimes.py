@@ -10,13 +10,13 @@ sieve = [True]*2000000
 sieve[0] = False
 primes = []
 
-for i in range( 2, 2*10**6 ):
+for i in xrange( 2, 2*10**6 ):
 
     if sieve[i-1]:
 
         primes.append(i)
 
-        for j in range( i*i, 2*10**6, i ):
+        for j in xrange( i*i, 2*10**6, i ):
 
             sieve[j-1] = False
 
